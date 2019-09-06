@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN"
+                                        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory>
+ 
+  <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+  <property name="hibernate.connection.url">jdbc:oracle:thin:@127.0.0.1:1521:XE</property>
+  <property name="hibernate.connection.username">user1</property>
+  <property name="hibernate.connection.password">abc123</property>
+  <property name="dialect">org.hibernate.dialect.Oracle10gDialect</property> <!-- telling hibernate which DB we're using -->
+   
+   
+  <property name="show_sql">true</property>
+  <property name="hibernate.hbm2ddl.auto">update</property> <!-- environment, auto = auto detect -->
+  <mapping class="com.p1.Car"/>
+  <mapping class = "com.p1.HatchBack"/>
+  <mapping class = "com.p1.SportsCar"/>
+  
+ 
+ </session-factory>
+
+</hibernate-configuration>
+
+<!-- If using Maven project, put this file in resources -->
